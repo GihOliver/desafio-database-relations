@@ -41,3 +41,8 @@ export default class CreateProducts1590025841775 implements MigrationInterface {
       }),
     );
   }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('products');
+  }
+}
